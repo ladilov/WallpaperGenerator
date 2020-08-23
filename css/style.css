@@ -13,8 +13,10 @@ header {
     text-align: center;
     height: 100vh;
     padding-top: 9%;
-    left: 50%;  
-    scroll-behavior: smooth; 
+    left: 50%;
+    scroll-behavior: smooth;
+    top: 0;
+    position: sticky;
 }
 
 header span {
@@ -66,7 +68,7 @@ a {
     border: 0;
 }
 
-@keyframes text { 
+@keyframes text {
     0% {
         color: #333333;
         margin-bottom: -265px;
@@ -92,5 +94,6 @@ a {
     position: sticky;
     top: 0;
     background-size: cover;
+    height: 110vh;
     width: 196.4vh;
 }
