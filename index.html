@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+
     <script>
-        $(function(){
-            $('a[href^="#"]').on('click', function(event) {
+        $(function () {
+            $('a[href^="#"]').on('click', function (event) {
                 // отменяем стандартное действие
                 event.preventDefault();
-                
+
                 var sc = $(this).attr("href"),
                     dn = $(sc).offset().top;
                 /*
-                * sc - в переменную заносим информацию о том, к какому блоку надо перейти
-                * dn - определяем положение блока на странице
-                */
-                
-                $('html, body').animate({scrollTop: dn}, 500);
-                
+                 * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+                 * dn - определяем положение блока на странице
+                 */
+
+                $('html, body').animate({
+                    scrollTop: dn
+                }, 500);
+
                 /*
-                * 1000 скорость перехода в миллисекундах
-                */
+                 * 1000 скорость перехода в миллисекундах
+                 */
             });
         });
     </script>
 
     <title>Wallpaper Generator</title>
 </head>
+
 <body>
     <header>
         <div class="titles">
@@ -39,7 +43,7 @@
         </div>
         <div>
             <a class="title_button" href="#content">TRY IT NOW</a>
-        </div>    
+        </div>
     </header>
 
     <section class="content">
@@ -47,7 +51,7 @@
             <div class="container">
                 <div class="section">
                     <script type="text/javascript">
-                        var size = 59;
+                        var size = 100;
                         for (var i = size; i >= 0; --i) {
                             var path = 'images/img' + i + '.jpg';
                             document.write("<img src='" + path + "'" + " alt=''");
@@ -59,4 +63,5 @@
         </div>
     </section>
 </body>
+
 </html>
