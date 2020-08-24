@@ -53,9 +53,10 @@
                     <script type="text/javascript">
                         var size = 100;
                         for (var i = size; i >= 0; --i) {
-                            var path = 'images/img' + i + '.jpg';
-                            document.write("<img src='" + path + "'" + " alt=''");
-                            document.write("</br>");
+                            var path = './images/img' + i + '.jpg';
+                            document.write(
+                                `<div style='background: url("${path}"); margin: 0; background-attachment: fixed; width: 196.4vh; height: 110vh;'></div>`
+                                );
                         }
                     </script>
                 </div>
